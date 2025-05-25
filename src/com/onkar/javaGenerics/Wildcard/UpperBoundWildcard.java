@@ -24,3 +24,23 @@ public class UpperBoundWildcard {
 		Number num = numbers.get(0);
 	}
 }
+=======================================================================================================================================================================
+Java Generics allow you to create classes, interfaces, and methods with type parameters, making code more reusable and type-safe. They help eliminate type casting and 
+reduce runtime errors. Let’s break this down step by step.
+
+1. Why Use Generics?
+Without generics, you would have to store objects in collections like ArrayList and manually cast them when retrieving:
+
+ArrayList list = new ArrayList();
+list.add("Hello");
+String str = (String) list.get(0); // Needs explicit casting
+
+Generics solve this by enforcing type safety at compile time:
+ArrayList<String> list = new ArrayList<>();
+list.add("Hello");
+String str = list.get(0); // No casting needed
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
