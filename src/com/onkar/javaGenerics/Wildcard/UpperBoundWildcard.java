@@ -168,6 +168,29 @@ Summary
 ✔ Allow reusable components (classes, methods, interfaces)
 ✔ Wildcards (?) add flexibility for unknown types
 Since you're already comfortable with Java’s data structures, this will help you write cleaner and scalable code! Do you want an example related to Set, Stack, or List? 🚀
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+🧱 Real-World Patterns with Generics
+1. DAO Pattern (Data Access Object)
+A DAO is responsible for encapsulating access to a data source (DB, file, API).
+
+✅ Generic DAO Example
+public interface GenericDAO<T, ID> {
+    T findById(ID id);
+    List<T> findAll();
+    void save(T entity);
+    void delete(T entity);
+}
+
+Example Implementation:
+public class UserDAO implements GenericDAO<User, Long> {
+    // Implementation using JDBC/Hibernate/etc.
+}
+
+Benefits:
+One interface for all DAOs
+Strong type safety
+Easy to swap out implementations
+
 =============================================================================================================================================================================
 
 
